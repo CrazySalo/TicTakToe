@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TicTakToe</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/game.css">
+<script type="text/javascript" src="js/lib/angular.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+<script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+  <div id="tic-tac-toe">
+    <div>
+      <div>
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <div ng-app="game">
+        <div ng-controller="mainCtrl">
+          <table id="board">
+            <tbody>
+              <tr ng-repeat="row in game.board.fields track by $index">
+                <td class="btn" ng-repeat="val in row track by $index"
+                  ng-class="{disable: val.type > 0, x: val.player == 1, y: val.player == 2}"
+                  ng-click="makeMove($parent.$index, $index)">{{figures[val.player]}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="new-game">
+            <table>
+              <tbody>
+                <tr> 
+                  <td valign="top"><a href="#" class="btn btn-primary" ng-click="newGame()">Create new game</a></td>
+                  <td valign="top">
+                    <label>vs AI</label>
+                    <div class="material-switch pull-right">
+                      <input id="vsAI" type="checkbox" ng-model="vsAI" /> 
+                      <label for="vsAI" class="label-success"></label>
+                    </div>
+                  </td>
+                  <td valign="top" ng-show="vsAI">
+                    <ul class="difficulty" >
+                      <li ng-repeat="d in difficultyData">
+                        <input type="radio" ng-model="$parent.difficulty" name="difficulty" ng-value="d.value">
+                        {{ d.label }}
+                      </li><br/>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <div><label>Game id:</label><input class="game-id" ng-value="game.id"/></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

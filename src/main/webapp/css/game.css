@@ -1,0 +1,109 @@
+#tic-tac-toe .disable {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#tic-tac-toe #board td {
+  padding: 0;
+  margin: 5px;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  font-size: 40px;
+  color: #ccc;
+  background-color: #ccc;
+}
+
+#tic-tac-toe #board .btn.disable {
+  color: #fff;
+}
+
+#tic-tac-toe #board .btn.x {
+  background-color: #6f6;
+}
+
+#tic-tac-toe #board .btn.y {
+  background-color: #66f;
+}
+
+#tic-tac-toe h1 {
+  text-align: center;
+  font-size: 28px;
+}
+
+#tic-tac-toe {
+  width: 220px;
+  margin: 0 auto
+}
+
+#tic-tac-toe input.game-id {
+  width:135px; 
+  font-size: 8px; 
+  margin-left: 10px;
+}
+
+div#new-game {
+  width: 340px; 
+  margin:20px 0 10px -10px;
+}
+
+#new-game label {
+  margin: 0 5px;
+}
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+ul.difficulty {
+  padding: 0;
+  margin: 0 10px;
+}
+
+ul.difficulty li {
+  list-style-type: none;
+}
+
+
