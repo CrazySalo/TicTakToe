@@ -8,7 +8,7 @@ app.controller('mainCtrl', function ($scope, $http) {
     $scope.difficultyData = [
         { label: 'Easy', value: 0 },
         { label: 'Normal', value: 1 },
-        { label: 'Impossible', value: 2}
+        { label: 'Hard', value: 2}
       ];
     
     $scope.newGame = function() {

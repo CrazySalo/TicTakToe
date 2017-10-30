@@ -118,7 +118,7 @@ public class TicTakToeAiEngine extends AiEngine {
         List<SimpleMove> freeMoves = new ArrayList<SimpleMove>(moves.size());
         List<SimpleMove> bestMoves = new ArrayList<SimpleMove>();
         bestMoves.addAll(moves);
-        int deep2 = moves.size() >= 7 ? 2 : 1;
+        int deep2 = moves.size() >= 6 ? 2 : 1;
         //we analyze next move of current player and after next 2 moves for both player: 1+deep/2+deep/2
         //we don't care about order of deep2+deep2 moves
         if (moves.size() >= deep2*2+1) {

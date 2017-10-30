@@ -19,7 +19,7 @@ import game.SimpleMove;
 import game.tictactoe.TicTacToeGame;
 
 /**
- * @author allen
+ * @author yakov
  *
  */
 @Path("/tictaktoe")
